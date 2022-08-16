@@ -1,7 +1,75 @@
+
+/* Font Styles */ 
+@font-face {
+  font-family: Kollektif;
+  src: url(./fonts/Kollektif.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: Kollektif;
+  src: url(./fonts/Kollektif-Bold.ttf);
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Kollektif;
+  src: url(./fonts/Kollektif-Italic.ttf);
+  font-weight: normal;
+  font-style: italic;
+}
+
+
+@font-face {
+  font-family: Radnika;
+  src: url(./fonts/Radnika-Medium.otf);
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Expanded */
+@font-face {
+  font-family: PlastoTrial;
+  src: url(./fonts/PlastoTrial-Expanded.otf);
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Thin */
+@font-face {
+  font-family: PlastoTrial-Thin;
+  src: url(./fonts/PlastoTrial-ExtLtExp.otf);
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Extra Bold */
+@font-face {
+  font-family: PlastoTrial-ExtraBold;
+  src: url(./fonts/PlastoTrial-ExtraBoldExpanded.otf);
+  font-weight: bolder;
+  font-style: normal;
+}
+
+/*  Bold */
+@font-face {
+  font-family: PlastoTrial-Bold;
+  src: url(./fonts/PlastoTrial-ExtraBold.otf);
+  font-weight: bolder;
+  font-style: normal;
+}
+
+
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: Kollektif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   margin: 0;
   overflow: scroll;
+  font-weight: normal;
+  font-style: normal;
+
 }
 
 .container {
@@ -11,19 +79,138 @@ body {
   grid-template-rows: 100px 1fr;
 }
 
+/* Sidebar Content */
 .sidebar {
-  background-color: mistyrose;
+  background-color: #27272a;
   grid-row: 1/-1;
+  display: grid;
+  color: white;
+  font-size: 0.9rem;
+  padding: 20px;
+  grid-template-rows: 1fr 2fr 1fr;
+
 }
 
+.sidebar img {
+  border-radius: 10px;
+  width:70px;
+}
+
+.group-1 {
+  font-size: 0.8rem;
+  padding-top: 20px;
+  font-weight: bold;
+
+}
+
+.sidebar-name  {
+  font-size: 1.2rem;
+  padding-top: 15px;
+  padding-bottom: 5px;
+}
+
+.sidebar-email {
+  color:#a8a8af;
+}
+
+.group-2 {
+  align-content: start;
+}
+ .sidebar-option {
+  padding-top: 30px;
+ }
+
+ .sidebar-option span {
+  padding-left: 10px;
+  color:#a8a8af;
+ }
+
+
+ .sidebar-option.option1 i {
+  color: white;
+ }
+
+
+ .sidebar-option.option1 span {
+  color: white;
+ }
+
+ .sidebar-option i {
+  font-size: 1.2em;
+  color:#a8a8af;
+ }
+
+ .group-3 .option8 {
+  padding-top: 90%;
+  align-content:flex-end;
+  
+ }
+
+
+ /* Header Content */
 .header {
-  background-color: rgb(199, 233, 244);
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  align-items: center;
+
 }
 
+.header-title {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.header-menu {
+  display: grid;
+  justify-self: end;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+input[type=text] {
+  background: url(./assets/magnifying-glass-solid.svg) no-repeat scroll 10px;
+  background-size: 15px;
+
+  border: none;
+  border-radius: 10px;
+  padding-left: 30px;
+  background-color: #eaeaea;
+  font-family: Kollektif;
+}
+
+.header-search {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.header-notifs {
+  color: #4c4c4c;
+  background-color: #eaeaea;
+  width: 43px;
+  border-radius: 7px;
+}
+
+.header-notifs i {
+  padding: 13px 14px;
+}
+
+.header-button  {
+  color: white;
+  background-color: #27272a;
+  border-radius: 8px;
+  width: 130px;
+  text-align: center;
+  justify-self: center;
+  align-self: center;
+  padding: 10px;
+  font-size: 0.9rem;
+}
+
+/* Main Content */
 .main-content {
   display: grid;
   grid-template-columns: 3fr 1fr;
-  grid-template-rows: 3fr 5fr 3fr;
+  grid-template-rows: 2fr 5fr 3fr;
   gap: 20px;
 }
 
@@ -31,11 +218,21 @@ body {
   margin: 0px 40px;
 }
 .annoucements {
-  background-color: rgb(170, 255, 227);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   grid-column: 2/3;
-  grid-row: 1/-1;
+  grid-row: 1/3;
+  border-radius: 10px;
 
 }
+
+.customer-activity {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  grid-column: 2/3;
+  grid-row: 3/-1;
+  border-radius: 10px;
+
+}
+
 
 .sm-card {
   display: grid;
@@ -43,12 +240,96 @@ body {
   gap: 20px;
 }
 
+.sm-card .amount {
+  font-size: 1.6rem;
+}
+
+.sm-card i {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 15px;
+  justify-self: start;
+  font-size: 1.5rem;
+  margin-right: 20px;
+}  
+.sm-card .fa-arrow-trend-up, .sm-card .fa-arrow-trend-down {
+  background-color: #27272a00;
+  justify-self: end;
+  margin-right: 0px;
+
+}
 .card1, .card2, .card3 {
-  background-color: rgb(199, 199, 199);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    border-radius: 13px;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  align-items: center;
 
 }
 
+.sm-card .title {
+  align-self: center;
+  justify-self:start;
+  font-size: 1.2rem;
+  grid-column: 1/-1;
+}
+
+
+.card1 {
+  background-color: rgb(218, 235, 250);
+}
+
+.card2 {
+  background-color: rgb(225, 246, 194);
+}
+
+.card3 {
+  background-color: rgb(222, 218, 250);
+}
+
+
+/* Top Selling Products */
+
 .lg-card {
-  background-color: azure;
-  grid-column: 1/2;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;  grid-column: 1/2;
+  display: grid;
+  grid-template-rows: 1fr 4fr;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.lg-card .title {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+
+th {
+  text-align: start;
+  color:#a8a8af;
+  padding-bottom: 20px;
+}
+
+td img {
+  width: 45px;
+  height: 45px;
+  text-align: center;
+  justify-self: start;
+  vertical-align: middle;
+  border-radius: 5px;
+  padding-right: 10px;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+
+ td {
+  align-self: start;
+  justify-self: start;
+  border-bottom:1.1px solid rgb(240, 240, 240);
+  
 }

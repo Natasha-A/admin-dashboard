@@ -6,22 +6,137 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Admin Dashboard</title>
   <link href="./styles.css" rel="stylesheet"/>
+  <script src="https://kit.fontawesome.com/da32d6cbde.js" crossorigin="anonymous"></script>
+
 </head>
 <body>  
   <div class="container">
     <div class="sidebar">
-      Sidebar
+      <div class="group-1">
+        <img src="./assets/face_icon.jpeg"/>
+        <div class="sidebar-name">Anthony Gray</div>
+        <div class="sidebar-email">anthonygray@gmail.com</div>
+      </div>
+
+    <div class="group-2">
+      <div class="sidebar-option  option1">
+        <i class="fa-solid fa-border-all"></i>  <span>Overview</span>
+      </div>
+      <div class="sidebar-option option2">
+        <i class="fa-solid fa-chart-line"></i>
+        <span>Analytics</span>
+      </div>
+      <div class="sidebar-option option4">
+        <i class="fa-solid fa-user-group"></i>
+        <span>Customers</span>
+      </div>
+      <div class="sidebar-option option5">
+        <i class="fa-solid fa-circle-question"></i>
+        <span>Support</span>
+      </div>
+      <div class="sidebar-option option6">
+        <i class="fa-solid fa-gear"></i>
+        <span>Settings</span></div>
     </div>
-    <div class="header">Header</div>
+
+    <div class="group-3">
+      <div class="sidebar-option option8">
+        <i class="fa-solid fa-arrow-right-from-bracket"></i>
+        <span>Logout</span>
+      </div>
+    </div>
+
+    </div>
+    <div class="header">
+      <div class="header-title">Overview</div>
+
+      <div class="header-menu">
+        <div class="header-search">
+          <input type="text" placeholder="Search">
+        </div>
+        <div class="header-notifs">
+          <i class="fa-solid fa-bell"></i>
+        </div>
+        <div class="header-button">
+          Share Insights
+        </div>
+      </div>
+    </div>
     <div class="main-content">
         <div class="sm-card">
-          <div class="card1">Card 1</div>
-          <div class="card2"> Card 2</div>
-          <div class="card3"> Card 3</div>
+          <div class="card1">
+       
+            <span class="title">
+              <i class="fa-solid fa-tag"></i>
+              Total Sales</span>
+            <div class="amount">$4876.98</div>
+            <i class="fa-solid fa-arrow-trend-up"></i>
+          </div>
+          <div class="card2"> 
+        <span class="title">
+          <i class="fa-solid fa-chart-line"></i>            
+          Total Profit</span>
+            <div class="amount">$762.15</div>
+            <i class="fa-solid fa-arrow-trend-down"></i>          </div>
+          <div class="card3">      <span class="title">
+            <i class="fa-solid fa-box"></i>  
+            Total Orders</span>
+            <div class="amount">1056</div>
+            <i class="fa-solid fa-arrow-trend-up"></i>
+          </div>
         </div>
-        <div class="lg-card">Graph</div>
-        <div class="lg-card">Top Products</div>
-        <div class="annoucements"></div>
+        <div class="lg-card graph">
+          <div class="title">Sales Analytics</div>
+
+        </div>
+        <div class="lg-card top-products">
+          <div class="title">Top Selling Products</div>
+          <table>
+            <tr>
+              <th>Product</th>
+              <th>Sold</th>
+              <th>Total sales</th>
+              <th>Stock status</th>
+              <th></th>
+
+            </tr>
+            <tr>
+              <td>
+                <img src="./assets/jordan-stay-loyal.png"/>
+                <span>Jordan Stay Loyal</span>
+              </td>
+              <td>321 Pcs</td>
+              <td>$8,500</td>
+              <td>In Stock</td>
+              <td>...</td>
+            </tr>
+            <tr>
+              <td>
+                <img src="./assets/air-jordan-1.png"/>
+                <span>Jordan Air Jordan 1</span>
+              </td>
+              <td>583 Pcs</td>
+              <td>$12,000</td>
+              <td>In Stock</td>
+              <td>...</td>
+
+            </tr>
+            <tr>
+              <td>
+                <img src="./assets/nike-airforce.png"/>
+                <span>Nike Air Force 1 Shadow</span>
+              </td>
+              <td>462 Pcs</td>
+              <td>$10,330</td>
+              <td>Out of Stock</td>
+              <td>...</td>
+            </tr>
+          </table>
+          
+        </div>
+        <div class="annoucements">Annoucements</div>
+        <div class="customer-activity">Customers</div>
+
       </div>
     </div>
   </div>
