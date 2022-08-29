@@ -16,7 +16,7 @@ An Admin Dashboard to practice complex layout techniques using CSS Grid. View it
 ## Learning Outcomes 
 * Strong understanding of CSS Grid and properties  
 * Advanced Grid properties practiced including `minmax()`, `clamp()`, & `auto-fill()`
-* UX/UgtI concepts practiced for modern and cohesive dashboard  
+* UX/UI concepts practiced for modern and cohesive design  
 * Responsive design using media queries and break-points
 * Learned `Charts.js` to embed, style and customize live charts using array and object manipulation 
 
