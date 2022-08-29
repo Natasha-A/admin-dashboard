@@ -4,14 +4,13 @@ An Admin Dashboard to practice complex layout techniques using CSS Grid. View it
 ## Objective
 * Utlilze CSS Grid components to create complex web layouts
 * Develop strong understanding of how to position Grid elements
-* Incorporate charts and graphs to simulate realistic admin dasboard
+* Incorporate charts and graphs to present live data
 * Responsive design for desktop and mobile views
 
 ## Sample Views 
-
-<blockquote class="imgur-embed-pub" lang="en" data-id="a/wuDevjA" ><a href="[//imgur.com/a/wuDevjA](//imgur.com/a/wuDevjA)"></a></blockquote><script async src="[//s.imgur.com/min/embed.js](//s.imgur.com/min/embed.js)" charset="utf-8"></script>
-
-![Image 3]()
+![Image 1](./assets/desktop-demo.png)
+![Image 2](./assets/desktop-responsive-demo.gif)
+![Image 3](./assets/moblie-responsive-demo.gif)
 
 
 ## Learning Outcomes 
