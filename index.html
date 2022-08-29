@@ -1,50 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Admin Dashboard</title>
-  <link href="./styles.css" rel="stylesheet"/>
   <script src="https://kit.fontawesome.com/da32d6cbde.js" crossorigin="anonymous"></script>
+  <link href="./styles.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+  </script>
 
 </head>
-<body>  
+
+<body>
   <div class="container">
     <div class="sidebar">
       <div class="group-1">
-        <img src="./assets/face_icon.jpeg"/>
+        <img src="./assets/face_icon.jpeg" />
         <div class="sidebar-name">Anthony Gray</div>
         <div class="sidebar-email">anthonygray@gmail.com</div>
       </div>
 
-    <div class="group-2">
-      <div class="sidebar-option  option1">
-        <i class="fa-solid fa-border-all"></i>  <span>Overview</span>
+      <div class="group-2">
+        <div class="sidebar-option  option1">
+          <i class="fa-solid fa-border-all"></i> <span>Overview</span>
+        </div>
+        <div class="sidebar-option option2">
+          <i class="fa-solid fa-chart-line"></i>
+          <span>Analytics</span>
+        </div>
+        <div class="sidebar-option option4">
+          <i class="fa-solid fa-user-group"></i>
+          <span>Customers</span>
+        </div>
+        <div class="sidebar-option option5">
+          <i class="fa-solid fa-circle-question"></i>
+          <span>Support</span>
+        </div>
+        <div class="sidebar-option option6">
+          <i class="fa-solid fa-gear"></i>
+          <span>Settings</span>
+        </div>
       </div>
-      <div class="sidebar-option option2">
-        <i class="fa-solid fa-chart-line"></i>
-        <span>Analytics</span>
-      </div>
-      <div class="sidebar-option option4">
-        <i class="fa-solid fa-user-group"></i>
-        <span>Customers</span>
-      </div>
-      <div class="sidebar-option option5">
-        <i class="fa-solid fa-circle-question"></i>
-        <span>Support</span>
-      </div>
-      <div class="sidebar-option option6">
-        <i class="fa-solid fa-gear"></i>
-        <span>Settings</span></div>
-    </div>
 
-    <div class="group-3">
-      <div class="sidebar-option option8">
-        <i class="fa-solid fa-arrow-right-from-bracket"></i>
-        <span>Logout</span>
+      <div class="group-3">
+        <div class="sidebar-option option8">
+          <i class="fa-solid fa-arrow-right-from-bracket"></i>
+          <span>Logout</span>
+        </div>
       </div>
-    </div>
 
     </div>
     <div class="header">
@@ -63,82 +68,245 @@
       </div>
     </div>
     <div class="main-content">
-        <div class="sm-card">
-          <div class="card1">
-       
-            <span class="title">
-              <i class="fa-solid fa-tag"></i>
-              Total Sales</span>
-            <div class="amount">$4876.98</div>
-            <i class="fa-solid fa-arrow-trend-up"></i>
-          </div>
-          <div class="card2"> 
-        <span class="title">
-          <i class="fa-solid fa-chart-line"></i>            
-          Total Profit</span>
-            <div class="amount">$762.15</div>
-            <i class="fa-solid fa-arrow-trend-down"></i>          </div>
-          <div class="card3">      <span class="title">
-            <i class="fa-solid fa-box"></i>  
+      <div class="sm-card">
+        <div class="card1">
+
+          <span class="title">
+            <i class="fa-solid fa-tag"></i>
+            Total Sales</span>
+          <div class="amount">$4876.98</div>
+          <i class="fa-solid fa-arrow-trend-up"></i>
+        </div>
+        <div class="card2">
+          <span class="title">
+            <i class="fa-solid fa-chart-line"></i>
+            Total Profit</span>
+          <div class="amount">$762.15</div>
+          <i class="fa-solid fa-arrow-trend-down"></i>
+        </div>
+        <div class="card3"> <span class="title">
+            <i class="fa-solid fa-box"></i>
             Total Orders</span>
-            <div class="amount">1056</div>
-            <i class="fa-solid fa-arrow-trend-up"></i>
-          </div>
+          <div class="amount">1056</div>
+          <i class="fa-solid fa-arrow-trend-up"></i>
         </div>
-        <div class="lg-card graph">
-          <div class="title">Sales Analytics</div>
+      </div>
+      <div class="lg-card graph">
+        <div class="title">Sales Analytics</div>
 
-        </div>
-        <div class="lg-card top-products">
-          <div class="title">Top Selling Products</div>
-          <table>
-            <tr>
-              <th>Product</th>
-              <th>Sold</th>
-              <th>Total sales</th>
-              <th>Stock status</th>
-              <th></th>
+        <canvas id="line-graph" style="position: relative; height:100%;"></canvas>
+      </div>
+      <div class="lg-card top-products">
+        <div class="title">Top Selling Products</div>
+        <table>
+          <tr>
+            <th>Product</th>
+            <th>Sold</th>
+            <th>Total sales</th>
+            <th>Stock status</th>
+            <th></th>
 
-            </tr>
-            <tr>
-              <td>
-                <img src="./assets/jordan-stay-loyal.png"/>
-                <span>Jordan Stay Loyal</span>
-              </td>
-              <td>321 Pcs</td>
-              <td>$8,500</td>
-              <td>In Stock</td>
-              <td>...</td>
-            </tr>
-            <tr>
-              <td>
-                <img src="./assets/air-jordan-1.png"/>
-                <span>Jordan Air Jordan 1</span>
-              </td>
-              <td>583 Pcs</td>
-              <td>$12,000</td>
-              <td>In Stock</td>
-              <td>...</td>
+          </tr>
+          <tr>
+            <td>
+              <img src="./assets/jordan-stay-loyal.png" />
+              <span>Jordan Stay Loyal</span>
+            </td>
+            <td>321 Pcs</td>
+            <td>$8,500</td>
+            <td>In Stock</td>
+            <td style="color:#a8a8af">...</td>
+          </tr>
+          <tr>
+            <td>
+              <img src="./assets/air-jordan-1.png" />
+              <span>Jordan Air Jordan 1</span>
+            </td>
+            <td>583 Pcs</td>
+            <td>$12,000</td>
+            <td>In Stock</td>
+            <td style="color:#a8a8af">...</td>
 
-            </tr>
-            <tr>
-              <td>
-                <img src="./assets/nike-airforce.png"/>
-                <span>Nike Air Force 1 Shadow</span>
-              </td>
-              <td>462 Pcs</td>
-              <td>$10,330</td>
-              <td>Out of Stock</td>
-              <td>...</td>
-            </tr>
-          </table>
-          
-        </div>
-        <div class="annoucements">Annoucements</div>
-        <div class="customer-activity">Customers</div>
+          </tr>
+          <tr >
+            <td>
+              <img src="./assets/nike-airforce.png" />
+              <span>Nike Air Force 1 Shadow</span>
+            </td>
+            <td>462 Pcs</td>
+            <td>$10,330</td>
+            <td>Out of Stock</td>     
+            <td style="color:#a8a8af">...</td>
+          </tr>
+        </table>
 
       </div>
+      <div class="earnings">
+        <div class="earnings-title">
+          <span>Earnings</span>
+          <select id="earnings" name="earnings">
+            <option value="monthly">Monthly</option>
+            <option value="daily">Daily</option>
+            <option value="yearly">Yearly</option>
+          </select>
+        </div>
+        <canvas id="earnings-chart">
+        </canvas>
+
+
+        <div class="earnings-labels">
+          <div class="section-1">
+            <div class=".icon-1"><i class="fa-solid fa-circle" style="color: rgb(218, 235, 250)"></i>Sales</div>
+            <div><i class="fa-solid fa-circle" style="color: #E2F6C2"></i>Profit</div>
+          </div>
+          <div class="section-1">
+            <div><i class="fa-solid fa-circle" style="color:rgb(222, 218, 250)"></i>Growth</div>
+            <div><i class="fa-solid fa-circle" style="color: #ffe1f3"></i>Vistors</div>
+          </div>
+        </div>
+      </div>
+      <div class="customer-activity">
+        <div class="customers-title">
+          Customer Activity
+          <i class="fa-solid fa-ellipsis-vertical"></i>
+        </div>
+        <div class="customer-graph">
+          <canvas id="bar-graph" style="position: relative; max-height: 200px;"></canvas>
+        </div>
+      </div>
+
     </div>
   </div>
+  </div>
+
+  <script>
+    var xValues = ["Sales", "Profit", "Growth", "Vistors"];
+    var yValues = [55, 49, 44, 24];
+    var barColors = [
+      "rgb(218, 235, 250)",
+      " rgb(225, 246, 194)",
+      "rgb(222, 218, 250)",
+      "#ffe1f3",
+      "rgb(243, 255, 194)"
+    ];
+
+    new Chart("earnings-chart", {
+      type: "doughnut",
+      data: {
+        labels: null,
+        datasets: [{
+          backgroundColor: barColors,
+          hoverOffset: 4,
+          data: yValues
+        }], 
+      },
+      options: {
+        aspectRatio: 1,
+        maintainAspectRatio: true,
+        title: {
+          display: false,
+          text: ""
+        }
+      }
+    });
+
+
+    new Chart("line-graph", {
+      type: "line",
+      data: {
+        labels: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+        datasets: [{
+          label: 'Sales',
+          data: [860, 1140, 1060, 1060, 1070, 1110, 1330, 2210, 7830, 2478, 2342, 3423, 10000],
+          borderColor: "rgb(218, 235, 250)",
+          fill: false,
+          borderWidth: 5,
+          borderJoinStyle: "round",
+          borderCapStyle: "round",
+          fontFamily: "Radnika"
+        }, {
+          label: 'Profit',
+          data: [1600, 1700, 1700, 1900, 2000, 2700, 4000, 5000, 6000, 7000, 5050, 7500],
+          borderColor: "rgb(225, 246, 194)",
+          fill: false,
+          borderWidth: 5,
+          borderJoinStyle: "round",
+          borderCapStyle: "round"
+        }, {
+          label: 'Orders',
+          data: [300, 700, 2000, 5000, 6000, 4000, 2000, 1000, 500, 1000, 2030, 400],
+          borderColor: "rgb(222, 218, 250)",
+          fill: false,
+          borderWidth: 5,
+          borderJoinStyle: "round",
+          borderCapStyle: "round"
+        }]
+      },
+      options: {
+        legend: {
+          display: window.innerWidth > 1000 ? true:false,
+          position: "bottom",
+          data: ["Hi", "gy", 'gy'],
+          labels: {
+            fontFamily: 'Radnika',
+            weight: "900",
+            padding: 30,
+            fillStyle: "red"
+          }
+        }
+      }
+    });
+
+    var xValues = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
+    var yValues = [55, 49, 44, 24, 40];
+
+    new Chart("bar-graph", {
+      type: "bar",
+      fontColor: "white",
+      data: {
+        labels: xValues,
+        fontColor: "white",
+        fillStyle: "white",
+        datasets: [{
+          backgroundColor: barColors,
+          data: yValues,
+          fontColor: "white"
+        }]
+      },
+      options: {
+        aspectRatio: 2,
+        maintainAspectRatio: true,
+        legend: { display: false },
+        title: {
+          display: false,
+          fontColor: "white"
+        },
+        responsive: true,
+        scales: {
+          yAxes: [
+            {
+              ticks: {
+                fontColor: "#bfbdbd",
+                beginAtZero: false,
+                fontFamily: "Radnika",
+              },
+            },
+          ],
+          xAxes: [
+            {
+              ticks: {
+                fontColor: "#bfbdbd",
+                fontFamily: "Radnika",
+                fontSize: 14,
+                stepSize: 1,
+                beginAtZero: true,
+              },
+            },
+          ],
+        },
+      }
+    });
+  </script>
 </body>
+
 </html>
