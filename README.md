@@ -8,9 +8,9 @@ An Admin Dashboard to practice complex layout techniques using CSS Grid. View it
 * Responsive design for desktop and mobile views
 
 ## Sample Views 
-![Image 1](./assets/desktop-demo.png)
-![Image 2](./assets/desktop-responsive-demo.gif)
-![Image 3](./assets/moblie-responsive-demo.gif)
+<img src="./assets/desktop-demo.png" style="width:100%">
+<img src="./assets/desktop-responsive-demo-1.gif" style=" width:100%; max-height:500px;">
+<img src="./assets/moblie-responsive-demo.gif" style="max-height:500px;">
 
 
 ## Learning Outcomes 
@@ -18,5 +18,5 @@ An Admin Dashboard to practice complex layout techniques using CSS Grid. View it
 * Advanced Grid properties practiced including `minmax()`, `clamp()`, & `auto-fill()`
 * UX/UgtI concepts practiced for modern and cohesive dashboard  
 * Responsive design using media queries and break-points
-* Learned `Charts.js` to embed,style and customize live charts using array and object manipulation 
+* Learned `Charts.js` to embed, style and customize live charts using array and object manipulation 
 
