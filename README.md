@@ -9,8 +9,8 @@ An Admin Dashboard to practice complex layout techniques using CSS Grid. View it
 
 ## Sample Views 
 <img src="./assets/desktop-demo.png" style="width:100%">
-<img src="./assets/desktop-responsive-demo-1.gif" style=" width:100%; max-height:500px;">
-<img src="./assets/moblie-responsive-demo.gif" style="max-height:500px;">
+<img src="./assets/desktop-responsive-demo.gif" style=" width:100%; max-height:500px;">
+<img src="./assets/moblie-responsive-demo.gif" style="max-height:600px;">
 
 
 ## Learning Outcomes 
