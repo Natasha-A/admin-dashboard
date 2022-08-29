@@ -8,9 +8,9 @@ An Admin Dashboard to practice complex layout techniques using CSS Grid. View it
 * Responsive design for desktop and mobile views
 
 ## Sample Views 
-<blockquote class="imgur-embed-pub" lang="en" data-id="a/QqqYXOI" data-context="false" ><a href="//imgur.com/a/QqqYXOI"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
 
-![Image 2]()
+<blockquote class="imgur-embed-pub" lang="en" data-id="a/wuDevjA" ><a href="[//imgur.com/a/wuDevjA](//imgur.com/a/wuDevjA)"></a></blockquote><script async src="[//s.imgur.com/min/embed.js](//s.imgur.com/min/embed.js)" charset="utf-8"></script>
+
 ![Image 3]()
 
 
